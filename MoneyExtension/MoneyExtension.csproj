@@ -20,9 +20,9 @@
     <Summary>Extension to convert decimal to integer</Summary>
 
   </PropertyGroup>
-
- <ItemGroup>
+  
+<ItemGroup>
     <None Include="..\Media\icon.png" Pack="true" PackagePath="\"/>
-  </ItemGroup>
+</ItemGroup>
 
 </Project>

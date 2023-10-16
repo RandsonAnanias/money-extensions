@@ -13,9 +13,9 @@ jobs:
             - uses: actions/checkout@main
 
             - name: Set up .NET Core
-              uses: actions/setup-dotnet@v2
+              uses: actions/setup-dotnet@v3
               with:
-                dotnet-version: '7.0.x'
+                dotnet-version: '6.0.x'
 
             - name: Build with dotnet
               run: dotnet build --configuration Release
@@ -27,4 +27,4 @@ jobs:
               run: dotnet pack --configuration Release
 
             - name: Publish
-              run: dotnet nuget push "MoneyExtension/bin/Release/*.nupkg" -k ${{ secrets.GITHUB_TOKEN }} -s https://api.nuget.org/v3/index.json
+              run: dotnet nuget push "MoneyExtension/bin/Release/*.nupkg" -k ${{ secrets.NU_TOKEN }} -s https://api.nuget.org/v3/index.json
